@@ -213,6 +213,7 @@ body {
   font-weight: bold;
   color: #3b3333;
   position: relative;
+  outline: none;
 }
 
 .todo__form-btn:before {
@@ -244,6 +245,8 @@ body {
   list-style: none;
   font-size: 14px;
   color: rgba(0, 0, 0, 0.9);
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .todo__list--container {
@@ -303,7 +306,7 @@ body {
   color: #fff;
 }
 
-.todo__list--thrash {
+.todo__list--trash {
   padding-left: 4px;
   margin-left: auto;
   background-color: transparent;
@@ -312,12 +315,17 @@ body {
   cursor: pointer;
 }
 
-.todo__list--thrash i {
+.todo__list--trash i {
   pointer-events: none;
 }
 
 .selected {
   text-decoration: line-through;
   color: #5a5757;
+}
+
+.scaleOut {
+  -webkit-transform: scale(0) rotate(360deg);
+          transform: scale(0) rotate(360deg);
 }
 /*# sourceMappingURL=style.css.map */

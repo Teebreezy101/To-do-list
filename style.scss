@@ -168,6 +168,7 @@ body {
       font-weight: bold;
       color: rgb(59, 51, 51);
       position: relative;
+      outline: none;
 
       &:before {
         content: "";
@@ -199,6 +200,7 @@ body {
     list-style: none;
     font-size: 14px;
     color: rgba(0, 0, 0, 0.9);
+    transition: all 1s;
 
     &--container {
       display: flex;
@@ -209,10 +211,6 @@ body {
       transition: color .25s ease-in,
       transform 1s;
 
-    //   &:hover { For thrash button out
-    //       transform: scale(.5);
-        
-    //   }
     }
 
     &--check {
@@ -256,14 +254,14 @@ body {
       }
     }
 
-    &--thrash {
+    &--trash {
       padding-left: 4px;
       margin-left: auto;
       background-color: transparent;
       color: red;
       border: none;
       cursor: pointer;
-
+ 
       i {
           pointer-events: none;
       }
@@ -275,4 +273,8 @@ body {
     text-decoration: line-through;
     color: rgb(90, 87, 87);
     
+}
+
+.scaleOut {
+    transform: scale(0) rotate(360deg);
 }
