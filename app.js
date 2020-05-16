@@ -1,4 +1,9 @@
-const svg = document.querySelectorAll('path');
-for (let i = 0; i < svg.length; i++) {
-    console.log(`letter ${i} is ${svg[i].getTotalLength()} long`)
-}
+const list = document.querySelector('.todo__list');
+// const thrash = document.querySelector('.todo__list--thrash');
+
+
+list.addEventListener('change', function(e) {
+    if(e.target !== e.target.closest('.todo__list--check')) return;
+    e.target.parentNode.classList.toggle('selected');
+})
+
