@@ -23,6 +23,7 @@ const addNewItem = (e) => {
   //create li and append to div
   const listItem = document.createElement("li");
   listItem.innerText = formInput.value;
+  
   newDiv.appendChild(listItem);
 
   //create trash button and append icon to trash button then append btn to div
@@ -37,6 +38,7 @@ const addNewItem = (e) => {
   //clear input field
   formInput.value = "";
 };
+
 
 const deleteItem = (e) => {
   // delete only if trash button is clicked!
