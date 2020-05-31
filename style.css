@@ -79,8 +79,8 @@ body {
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
   opacity: 0;
-  -webkit-animation: slideIn .5s forwards, fillUp 1.5s forwards .5s;
-          animation: slideIn .5s forwards, fillUp 1.5s forwards .5s;
+  -webkit-animation: slideIn .25s forwards, fillUp .3s forwards .5s;
+          animation: slideIn .25s forwards, fillUp .3s forwards .5s;
 }
 
 .todo {
@@ -89,8 +89,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   opacity: 0;
-  -webkit-animation: show .5s 1s forwards;
-          animation: show .5s 1s forwards;
+  -webkit-animation: show .5s .5s forwards;
+          animation: show .5s .5s forwards;
 }
 
 .todo__form {
@@ -112,6 +112,42 @@ body {
 
 .todo__form-input:focus {
   border-bottom: 2px solid #000;
+}
+
+.todo__form-btn2 {
+  margin-top: 10px;
+  padding: 9px;
+  border: 1px solid #3b3333;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: bold;
+  color: #3b3333;
+  position: relative;
+  outline: none;
+  margin-left: 70px;
+}
+
+.todo__form-btn2:before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background-color: green;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition: width 0.25s, opacity 0.25s;
+  transition: width 0.25s, opacity 0.25s;
+}
+
+.todo__form-btn2:hover {
+  color: #fff;
+}
+
+.todo__form-btn2:hover::before {
+  width: 100%;
+  opacity: 1;
 }
 
 .todo__form-btn {
@@ -155,8 +191,8 @@ body {
   list-style: none;
   font-size: 14px;
   color: rgba(0, 0, 0, 0.9);
-  -webkit-transition: all 1s;
-  transition: all 1s;
+  -webkit-transition: all .25s;
+  transition: all .25s;
 }
 
 .todo__list--container {
